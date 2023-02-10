@@ -5,7 +5,7 @@ import Link from 'next/link';
 
 export default function ExperienceCard({ dataExp }) {
   return (
-    <article className="flex flex-col rounded-lg items-center space-y-7 flex-shrink-0 w-[350px] md::w-[600px] xl:w-[900px] snap-center bg-[#292929] p-10 hover:opacity-100 opacity-40 cursor-pointer transition-opacity duration-200 overflow-hidden">
+    <article className="flex flex-col rounded-lg items-center space-y-2 flex-shrink-0 w-[320px] h-5/6 sm:h-auto md::w-[600px] xl:w-[900px] snap-center bg-[#292929] p-10 hover:opacity-100 opacity-40 transition-opacity duration-200 overflow-hidden">
       <motion.img
         initial={{ y: -100, opacity: 0 }}
         transition={{ duration: 1.2 }}
@@ -16,10 +16,10 @@ export default function ExperienceCard({ dataExp }) {
         alt={dataExp.company}
       />
       <div className="px-0 md:px-10">
-        <h4 className="text-3xl font-light">{dataExp.title}</h4>
+        <h4 className="text-2xl font-light">{dataExp.title}</h4>
         <p className="font-bold text-xl mt-1">{dataExp.company}</p>
       </div>
-      <p className="uppercase space-y-4 ml-5 text-lg">
+      <p className="uppercase space-y-2 ml-5 ">
         started work {dataExp.start} - ended at {dataExp.end}
       </p>
       <ul className="list-disc space-y-4 ml-5 text-lg">

@@ -11,7 +11,7 @@ function ContactME() {
       <h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl">
         Contact
       </h3>
-      <div className="flex flex-col space-y-10 w-80 sm:w-2/4">
+      <div className="flex flex-col space-y-6 w-80 sm:space-y-10 sm:w-2/4">
         <div className="space-y-10">
           <a
             href="tel:00447518503552"
