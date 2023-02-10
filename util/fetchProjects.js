@@ -1,5 +1,7 @@
+import fetch from 'isomorphic-unfetch';
+
 export const fetchProjectData = async () => {
-  const res = await fetch(`http://localhost:3000/api/projectData`);
+  const res = await fetch(`${process.env.BASE_URL}/projectsData`);
 
   const projects = await res.json();
 

@@ -18,7 +18,7 @@ function Skills({ data }) {
       </h3>
 
       <div className="grid grid-cols-2  sm:grid-cols-3 md:grid-cols-4 gap-3">
-        {data.data.map((item) => (
+        {data.map((item) => (
           <Skill key={item.id} data={item} />
         ))}
       </div>

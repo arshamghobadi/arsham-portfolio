@@ -20,11 +20,13 @@ export default function Header() {
           bgColor="transparent"
           fgColor="gray"
           url="https://www.instagram.com/ghobadi.arsham"
+          target="_blank"
         />
         <SocialIcon
           bgColor="transparent"
           fgColor="gray"
           url="https://www.linkedin.com/in/arsham-ghobadi-044b8aa1"
+          target="_blank"
         />
         {/* <SocialIcon
           bgColor="transparent"

@@ -7,7 +7,7 @@ import Projects from '../components/Projects';
 import Skills from '../components/Skills';
 import WorkExperience from '../components/WorkExperience';
 import { fetchData } from '../util/fetchData';
-import { fetchExperience } from '../util/fetchDataExperience';
+import { fetchExperience } from '../util/fetchExperience';
 import { fetchProjectData } from '../util/fetchProjects';
 
 export default function Home({ dataExp, data, projects }) {
@@ -42,15 +42,22 @@ export default function Home({ dataExp, data, projects }) {
   );
 }
 
-export const getStaticProps = async () => {
+export async function getStaticProps() {
   const dataExp = await fetchExperience();
   const data = await fetchData();
   const projects = await fetchProjectData();
+
+  if (!data && dataExp && projects) {
+    return {
+      notFound: true,
+    };
+  }
   return {
     props: {
       dataExp,
       data,
       projects,
     },
+    revalidate: 60 * 60,
   };
-};
+}

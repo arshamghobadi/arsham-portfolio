@@ -15,7 +15,7 @@ function Projects({ projects }) {
         Projects
       </h3>
       <div className="relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20  scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80">
-        {projects.data.map((project) => (
+        {projects.map((project) => (
           <div
             key={project.id}
             className="w-screen flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center p-20 md:p-44 h-screen"
@@ -35,8 +35,12 @@ function Projects({ projects }) {
             <div className="space-y-6 px-0 md:px-10 max-w-6xl">
               <h4 className="text-2xl  text-center">{project.title}</h4>
               <div className=" flex flex-row  justify-evenly text-[#F7AB0A]">
-                <Link href={project.demo}>Demo</Link>
-                <Link href={project.SourceCode}>SourceCode</Link>
+                <Link target="_blank" href={project.demo}>
+                  Demo
+                </Link>
+                <Link target="_blank" href={project.SourceCode}>
+                  SourceCode
+                </Link>
               </div>
               <p className=" text-sm lg:text-lg text-center md:text-left">
                 {project.discription}

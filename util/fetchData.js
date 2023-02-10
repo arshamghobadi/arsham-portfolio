@@ -1,5 +1,6 @@
+import fetch from 'isomorphic-unfetch';
 export const fetchData = async () => {
-  const res = await fetch(`http://localhost:3000/api/data`);
+  const res = await fetch(`${process.env.BASE_URL}/data`);
 
   const dataSkill = await res.json();
 
