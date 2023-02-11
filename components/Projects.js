@@ -10,7 +10,7 @@ function Projects({ projects }) {
         Projects
       </h3>
 
-      <div className="relative w-full h-5/6 flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20  scrollbar-smooth scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80">
+      <div className="relative w-full h-5/6 flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20  scrollbar-smooth scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80">
         {projects.map((project) => (
           <div
             key={project.id}
