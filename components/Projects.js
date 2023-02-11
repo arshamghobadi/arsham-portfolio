@@ -1,16 +1,16 @@
 import React from 'react';
-
+import { HiArrowLongRight } from 'react-icons/hi2';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 
 function Projects({ projects }) {
   return (
     <motion.div className="h-screen relative flex overflow-hidden flex-col text-left md:flex-row max-w-full justify-evenly mx-auto items-center z-0 ">
-      <h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl">
+      <h3 className=" absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl">
         Projects
       </h3>
 
-      <div className="relative w-full h-5/6 flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20  scrollbar-smooth scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80">
+      <div className="relative w-full  flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory   scrollbar-smooth scrollbar z-30  scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80">
         {projects.map((project) => (
           <div
             key={project.id}
@@ -41,6 +41,10 @@ function Projects({ projects }) {
               <p className=" text-sm lg:text-lg text-center md:text-left">
                 {project.discription}
               </p>
+            </div>
+            <div className="flex flex-row items-center">
+              <p className=" mx-4 text-[#F7AB0A]">scroll right</p>
+              <HiArrowLongRight className=" text-[#F7AB0A]" />
             </div>
           </div>
         ))}
