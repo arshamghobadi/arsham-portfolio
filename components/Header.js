@@ -28,11 +28,11 @@ export default function Header() {
           url="https://www.linkedin.com/in/arsham-ghobadi-044b8aa1"
           target="_blank"
         />
-        {/* <SocialIcon
+        <SocialIcon
           bgColor="transparent"
           fgColor="gray"
-          url="https://twitter.com/jaketrent"
-        /> */}
+          url="https://github.com/arshamghobadi"
+        />
       </motion.div>
 
       <motion.div
