@@ -5,8 +5,13 @@ module.exports = {
     './pages/**/*.{js,ts,jsx,tsx}',
     './components/**/*.{js,ts,jsx,tsx}',
   ],
+  variants: {
+    extend: {
+      lineClamp: ['hover'],
+    },
+  },
   theme: {
     extend: {},
   },
-  plugins: [require('tailwind-scrollbar')],
+  plugins: [require('@tailwindcss/line-clamp'), require('tailwind-scrollbar')],
 };

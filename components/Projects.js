@@ -38,7 +38,7 @@ function Projects({ projects }) {
                   SourceCode
                 </Link>
               </div>
-              <p className=" text-sm lg:text-lg text-center md:text-left">
+              <p className=" text-sm lg:text-lg text-center md:text-left line-clamp-4 hover:line-clamp-none hover:text-xs">
                 {project.discription}
               </p>
             </div>
