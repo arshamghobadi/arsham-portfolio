@@ -4,6 +4,15 @@ import { motion } from 'framer-motion';
 import Link from 'next/link';
 
 function Projects({ projects }) {
+  const ref = useRef(null);
+
+  function scrollHandle() {
+    ref.current?.scrollIntoView({
+      behavior: 'smooth',
+      block: 'nearest',
+      inline: 'start',
+    });
+  }
   return (
     <motion.div className="h-screen relative flex overflow-hidden flex-col text-left md:flex-row max-w-full justify-evenly mx-auto items-center z-0 ">
       <h3 className=" absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl">
@@ -43,9 +52,15 @@ function Projects({ projects }) {
               </p>
             </div>
             <div className="flex flex-row items-center">
-              <div className=" mx-4 text-[#F7AB0A] cursor-pointer">
+              <div
+                ref={ref}
+                onClick={() => scrollHandle()}
+                className=" mx-4 text-[#F7AB0A] cursor-pointer "
+              >
+                {console.log(ref)}
                 scroll right
               </div>
+
               <HiArrowLongRight className=" text-[#F7AB0A]" />
             </div>
           </div>
