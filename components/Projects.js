@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { HiArrowLongRight } from 'react-icons/hi2';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
@@ -10,7 +10,7 @@ function Projects({ projects }) {
         Projects
       </h3>
 
-      <div className="relative w-full  flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory   scrollbar-smooth scrollbar z-30  scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80">
+      <div className="relative w-full  flex overflow-x-scroll overflow-y-hidden   scrollbar-smooth scrollbar z-30  scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80">
         {projects.map((project) => (
           <div
             key={project.id}
@@ -43,7 +43,9 @@ function Projects({ projects }) {
               </p>
             </div>
             <div className="flex flex-row items-center">
-              <p className=" mx-4 text-[#F7AB0A]">scroll right</p>
+              <div className=" mx-4 text-[#F7AB0A] cursor-pointer">
+                scroll right
+              </div>
               <HiArrowLongRight className=" text-[#F7AB0A]" />
             </div>
           </div>

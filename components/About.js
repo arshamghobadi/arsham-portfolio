@@ -26,7 +26,7 @@ export default function About() {
           <span className="underline decoration-[#F7AB0A]/50">little</span>{' '}
           background
         </h4>
-        <p className="text-sm">
+        <p className="text-sm line-clamp-4 hover:line-clamp-none">
           Hi,I&apos;m Arsham Ghobadi, a software engineer and front-end web
           developer.I have a passion for creating beautiful, intuitive, and
           functional websites and applications that meet the needs of both users
