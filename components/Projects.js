@@ -57,7 +57,6 @@ function Projects({ projects }) {
                 onClick={() => scrollHandle()}
                 className=" mx-4 text-[#F7AB0A] cursor-pointer "
               >
-                {console.log(ref)}
                 scroll right
               </div>
 

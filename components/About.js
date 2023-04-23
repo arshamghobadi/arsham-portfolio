@@ -12,14 +12,18 @@ export default function About() {
       <h3 className=" invisible sm:visible absolute top-20  uppercase tracking-[20px] text-gray-500 text-2xl">
         about
       </h3>
-      <motion.img
-        initial={{ x: -200, opacity: 0 }}
-        transition={{ duration: 1.2 }}
-        whileInView={{ x: 0, opacity: 1 }}
-        viewport={{ once: true }}
-        src="/photo1582649363.jpeg"
-        className=" mt-14 md:mb-0 md:mt-14 flex-shrink-0 w-32 h-32 sm:w-48 sm:h-48 rounded-full  object-cover md:rounded-lg md:w-64 md:h-80 xl:w-[500px] xl:h-[400px]  xl:mt-20"
-      />
+      <div className="w-full flex flex-col items-center ">
+        <motion.img
+          initial={{ x: -200, opacity: 0 }}
+          transition={{ duration: 1.2 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          viewport={{ once: true }}
+          src="/Untitled (2).jpg"
+          className="  bg-black mt-14 md:mb-0 md:mt-14 
+          object-cover 
+        rounded-lg   "
+        />
+      </div>
       <div className="space-y-8 px-0 md:px-10 ">
         <h4 className="text-3xl fort-semibold">
           Here is a{' '}
